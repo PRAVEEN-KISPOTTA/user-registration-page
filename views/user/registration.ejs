@@ -1,0 +1,47 @@
+<%= include("../layouts/header.ejs") %>
+<div>
+<h1>Registration Form</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <div>
+        <input type="text" name="name" placeholder="Name" required>
+        <br><br>
+    </div>
+
+    <div>
+        <input type="text" name="Mobile" placeholder="Mobile No." required>
+        <br><br>
+    </div>
+
+    <div>
+        <input type="email" name="email" placeholder="Email" required>
+        <br><br>
+    </div>
+
+    <div>
+        <input type="password" name="password" placeholder="Password" required>
+        <br><br>
+    </div>
+
+    <div>
+        <input type="file" name="images" placeholder="image" required>
+        <br><br>
+    </div>
+
+    <div>
+        <button type="submit">Register</button>
+    </div>
+</form>
+
+<%  
+  if(typeof msg !== "undefined"){
+    %>
+    <p style="color: blueviolet;"><%= msg %></p>
+    <%
+  }
+  %>
+</div>
+
+
+
+<%= include("../layouts/footer.ejs") %>
